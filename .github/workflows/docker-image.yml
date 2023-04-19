@@ -21,4 +21,4 @@ jobs:
         TVM_VERSION: 0.11.1
         ORG: worstass
         REPO: ${ORG}/tvm-devcontainer
-        IMAGE_TAG: worstass/tvm-devcontainer:${TVM_VERSION}
+        IMAGE_TAG: worstass/tvm-devcontainer:0.11.1
