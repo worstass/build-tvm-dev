@@ -3,7 +3,7 @@ ENV TVM_VERSION 0.11.1
 ENV TVM_HOME /usr/share/tvm
 RUN pip install apache-tvm==${TVM_VERSION}
 RUN git clone --depth 1 -b v${TVM_VERSION} https://github.com/apache/tvm.git
-RUM mkdir -p ${TVM_HOME} && \
+RUN mkdir -p ${TVM_HOME} && \
     cd tvm && \
     cp -r include ${TVM_HOME} && \
     cp -r 3rdparty/dlpack/include ${TVM_HOME} && \
