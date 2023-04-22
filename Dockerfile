@@ -1,6 +1,7 @@
 FROM condaforge/miniforge3:22.9.0-3
 ENV TVM_VERSION 0.11.1
 ENV TVM_HOME /usr/share/tvm
+RUN apt-get -y update && apt-get install -y gcc g++
 RUN pip install apache-tvm==${TVM_VERSION}
 RUN cd /tmp && git clone --recursive --depth 1 -b v${TVM_VERSION} https://github.com/apache/tvm.git
 RUN mkdir -p ${TVM_HOME} && \
